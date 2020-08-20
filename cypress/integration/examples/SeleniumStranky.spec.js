@@ -13,12 +13,12 @@ describe('Homepage', function () {
         cy.get('#btn_basic_example').should('be.visible').click()
 
     })
-    it('Vyber něco na homepage', function ()
+    it('krok3', function ()
     {
         cy.get('#basic > div > a:nth-child(1)').contains('Simple Form Demo').click()
         cy.contains('Enter message')
     })
-    it('Vyber něco na homepage', function ()
+    it('krok4, function ()
     {
         cy.get('.form-control[id=user-message]').should('be.enabled').type('hello')
         cy.get('#get-input > .btn').contains('Show Message').click()
