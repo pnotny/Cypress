@@ -18,13 +18,15 @@ describe('Homepage', function () {
         cy.get('#basic > div > a:nth-child(1)').contains('Simple Form Demo').click()
         cy.contains('Enter message')
     })
-    it('krok4, function ()
+    it('krok4', function ()
     {
-        cy.get('.form-control[id=user-message]').should('be.enabled').type('hello')
+      /*  cy.get('.form-control[id=user-message]').should('be.enabled').type('hello')
         cy.get('#get-input > .btn').contains('Show Message').click()
         cy.get(':nth-child(4) > .panel-body > :nth-child(4)').contains('hello')
     })
-
+cy.should('')
+*/
+cy.check1('hello') // tady jsem to udělal krok 4 jako comand/objekt s proměnou
     
-}
-)
+})
+})
