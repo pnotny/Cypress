@@ -28,7 +28,7 @@
 Cypress.Commands.add("check1", (input) => { 
     cy.get('.form-control[id=user-message]').should('be.enabled').type(input)
     cy.get('#get-input > .btn').contains('Show Message').click()
-    cy.get(':nth-child(4) > .panel-body > :nth-child(4)').contains('hello123')
+    cy.get(':nth-child(4) > .panel-body > :nth-child(4)').contains('hello3')
 
  })
 
