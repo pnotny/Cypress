@@ -26,7 +26,9 @@ describe('Homepage', function () {
     })
 cy.should('')
 */
-cy.check1('hello') // tady jsem to udělal krok 4 jako comand/objekt s proměnou husty
+cy.check1('hello3') // tady jsem to udělal krok 4 jako comand/objekt s proměnou husty
     
 })
 })
+
+
