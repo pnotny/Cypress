@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add("check1", (input) => { 
+Cypress.Commands.add("check0", (input) => { 
     cy.get('.form-control[id=user-message]').should('be.enabled').type(input)
     cy.get('#get-input > .btn').contains('Show Message').click()
     cy.get(':nth-child(4) > .panel-body > :nth-child(4)').contains('hello3')
@@ -36,6 +36,22 @@ Cypress.Commands.add("check1", (input) => {
     cy.get('#sum2').should('be.enabled').type(input2)
     cy.get('#gettotal > .btn').click().contains('Get Total')
     cy.get('#displayvalue').contains('3')
+    
+
+ })
+ Cypress.Commands.add("check3", () => { 
+    cy.get('#treemenu > :nth-child(1) > :nth-child(3) > :nth-child(1)').click()
+    cy.get(':nth-child(3) > :nth-child(1) > ul > :nth-child(2) > a').click()
+    cy.get('#isAgeSelected').should('not.be.checked').check().should('be.checked')
+    cy.get('#txtAge').contains('Success - Check box is checked')
+    
+
+ })
+ Cypress.Commands.add("check4", () => { 
+    cy.get('#check1').click().should('have.value', 'Uncheck All')
+    cy.get(':nth-child(3) > label > .cb1-element').should('be.checked').uncheck().should('not.be.checked')
+    cy.get(':nth-child(4) > label > .cb1-element').should('be.checked').uncheck().should('not.be.checked')
+    cy.get('#check1').should('have.value', 'Check All')
     
 
  })

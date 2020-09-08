@@ -28,7 +28,7 @@ cy.should('')
 */
     it('krok4', function ()
     {
-        cy.check1('hello3') // tady jsem to udělal krok 4 jako comand/objekt s proměnou husty  
+        cy.check0('hello3') // tady jsem to udělal krok 4 jako comand/objekt s proměnou husty  
     })
     it('krok5', function ()
     {
@@ -36,22 +36,21 @@ cy.should('')
         cy.get('#at-cv-lightbox-close').click()
         
     })
-    /*
+    
     it('krok6', function ()
     {
         cy.check3() // zde jsem checkoval check box
     })
     
-    it.only('krok7', function ()
+    it('krok7', function ()
     {
        cy.check4() //
     })
+    
     it('krok8', function ()
     {
        cy.check5() //
     })
-
-*/
 
 
 })
