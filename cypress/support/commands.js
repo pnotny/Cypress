@@ -31,5 +31,15 @@ Cypress.Commands.add("check1", (input) => {
     cy.get(':nth-child(4) > .panel-body > :nth-child(4)').contains('hello3')
 
  })
+ Cypress.Commands.add("check2", (input1,input2) => { 
+    cy.get('#sum1').should('be.enabled').type(input1)
+    cy.get('#sum2').should('be.enabled').type(input2)
+    cy.get('#gettotal > .btn').click().contains('Get Total')
+    cy.get('#displayvalue').contains('3')
+    
+
+ })
+  
+
 
  
