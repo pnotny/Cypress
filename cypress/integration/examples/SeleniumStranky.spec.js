@@ -1,10 +1,12 @@
 /// <reference types="cypress" />
 
+
+
 describe('Homepage', function () {
 
-    
+  
 
-    })
+    
     it('načti stránku a zkontroluj že jsi na homepage', function () {
 
 
@@ -59,20 +61,15 @@ cy.should('')
     it('zaškrtní první radiobutton', function ()
     {
        cy.firstradiobutton() // zaškrtne první várku radio buttonů
+       
     })
 
+  
     it('zkouška ddt', function ()
     {
-        before(function(){
-
-            cy.fixture('selenium').then(function(data){
+        cy.ajaxform()
     
-                this.data=data
-            })
-
-            cy.get(':nth-child(3) > :nth-child(1) > .tree-indicator').click()
-            cy.get(':nth-child(3) > :nth-child(1) > ul > :nth-child(6) > a').click()
-        cy.get('#title').type(this.data.name)
+            
     })
 
     

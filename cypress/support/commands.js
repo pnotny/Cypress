@@ -68,18 +68,31 @@ Cypress.Commands.add("makefirststep", (input) => {
 })
 
 Cypress.Commands.add("firstradiobutton", () => { 
-   cy.get('#buttoncheck').should('be.visible').click()
+   cy.get('#buttoncheck').as('tub')
+   cy.get('@tub').should('be.visible').click()
    cy.get('.radiobutton').contains('Male')
    
 
 })
 
 Cypress.Commands.add("ajaxform", () => { 
-   cy.get('#check1').click().should('have.value', 'Uncheck All')
-   cy.get(':nth-child(3) > label > .cb1-element').should('be.checked').uncheck().should('not.be.checked')
-   cy.get(':nth-child(4) > label > .cb1-element').should('be.checked').uncheck().should('not.be.checked')
-   cy.get('#check1').should('have.value', 'Check All')
-   
+
+   before(function(){
+
+      cy.fixture('selenium').then((name)=>{
+
+          this.name = name
+      })
+  })
+
+   cy.get(':nth-child(3) > :nth-child(1) > .tree-indicator').click()
+   cy.get(':nth-child(3) > :nth-child(1) > ul > :nth-child(6) > a').click()
+            cy.get('#title').type('jméno')
+            cy.get('#description').type('něco navíc')
+            cy.get('#btn-submit').as('sbmt').should('have.value', 'submit').should('be.visible').click()
+            cy.get('@sbmt').should('not.be.visible')
+            cy.get('#submit-control').contains('Successfully!')
+            
 
 })
 

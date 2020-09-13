@@ -1,6 +1,7 @@
 /// <reference types='cypress' />
 
 describe('My First Test', () => {
+
     it('Visits the Kitchen Sink', () => {
       cy.visit('https://example.cypress.io')
       cy.contains('type').click()
@@ -10,7 +11,7 @@ describe('My First Test', () => {
 {
     it('type in email', () => {
         cy.get('.action-email')
-        .type('pornhub@senam.cz')
+        .type('něco')
         .should('have.value','pornhub@senam.cz') 
     })
     it('click na submit', () => {

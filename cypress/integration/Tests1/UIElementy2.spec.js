@@ -14,7 +14,7 @@ describe('UI elementy', () => {
         cy.get('#checkbox3').uncheck().should('not.be.checked')
 //takhle vybírám a kontroluji jeden checkbox po druhém
 
-        cy.get('input[type=checkbox]').check(['Cricket','Hockey'])
+        cy.get('input[type=checkbox]').check(['Cricket','Hockey']) //here we have the Jquery
 //takhle vybírám všechny checkboxy, protože všechny mají stejný type, jenom měním obsah .check(['value1','value2'])
 
     })
